@@ -3,7 +3,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
-       { "folke/neodev.nvim", opts = {} },
+    { "folke/neodev.nvim", opts = {} },
   },
   config = function()
     -- import lspconfig plugin
@@ -83,7 +83,17 @@ return {
         lspconfig[server_name].setup({
           capabilities = capabilities,
         })
-      end,      
+      end,
+      ["pyright"] = function()
+        lspconfig["pyright"].setup({
+          capabilities = capabilities,
+          settings = {
+            python = {
+              pythonPath = vim.fn.exepath("/home/jorge/.local/share/anaconda3/envs/projects/bin/python"),
+            },
+          },
+        })
+      end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
@@ -104,4 +114,3 @@ return {
     })
   end,
 }
-
