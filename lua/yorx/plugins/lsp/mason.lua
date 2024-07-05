@@ -30,6 +30,7 @@ return {
         "tsserver",
         "lua_ls",
         "pyright",
+        "ruff_lsp"
       },
     })
 
@@ -37,10 +38,6 @@ return {
       ensure_installed = {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
-        "pylint",
-        "eslint_d",
       },
     })
   end,

@@ -37,3 +37,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- activate ligatures
+opt.guifont =  "Cascadia Code PL:h13"
+

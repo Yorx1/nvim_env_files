@@ -1,7 +1,7 @@
 return{
-   "arturgoms/moonbow.nvim",
+   "Shatur/neovim-ayu",
     priority = 1000,
     config = function()
-    vim.cmd([[colorscheme moonbow]])
+    vim.cmd([[colorscheme ayu-dark]])
 end,
 }

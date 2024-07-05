@@ -84,12 +84,30 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["ruff_lsp"] = function()
+        lspconfig["ruff_lsp"].setup({
+          init_options = {
+            settings = {
+              -- Any extra CLI arguments for `ruff` go here.
+              args = {},
+            }
+          }
+        })
+      end,
       ["pyright"] = function()
         lspconfig["pyright"].setup({
           capabilities = capabilities,
           settings = {
+            pyright = {
+              -- Using Ruff's import organizer
+              disableOrganizeImports = true,
+            },
             python = {
-              pythonPath = vim.fn.exepath("/home/jorge/.local/share/anaconda3/envs/projects/bin/python"),
+              analysis = {
+                ignore = { '*' },   -- Using Ruff
+                typeCheckingMode = 'off', -- Using mypy
+              },
+              pythonPath = vim.fn.exepath("/home/jorge/.local/share/anaconda3/envs/redshift_gui/bin/python"),
             },
           },
         })
