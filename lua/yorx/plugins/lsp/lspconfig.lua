@@ -84,8 +84,8 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["ruff_lsp"] = function()
-        lspconfig["ruff_lsp"].setup({
+      ["ruff"] = function()
+        lspconfig["ruff"].setup({
           init_options = {
             settings = {
               -- Any extra CLI arguments for `ruff` go here.
