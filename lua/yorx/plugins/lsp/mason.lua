@@ -31,7 +31,8 @@ return {
         "lua_ls",
         "pyright",
         "ruff",
-        "clangd"
+        "clangd",
+        "angularls"
       },
     })
 

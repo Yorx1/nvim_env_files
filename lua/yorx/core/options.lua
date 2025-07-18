@@ -11,7 +11,7 @@ opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
-opt.wrap = false
+opt.wrap = true
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
@@ -40,4 +40,5 @@ opt.swapfile = false
 
 -- activate ligatures
 opt.guifont =  "Cascadia Code PL:h13"
+
 
